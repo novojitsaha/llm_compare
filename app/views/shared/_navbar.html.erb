@@ -1,26 +1,24 @@
-<nav class="bg-white shadow">
+<nav class="bg-white border-b border-gray-200">
+  <div class="flex justify-between items-center h-16 px-4">
+    <!-- Brand -->
+    <%= link_to "LLM Comparator", root_path,
+          class: "text-xl font-bold text-indigo-600" %>
 
-      <div class="mx-auto px-4 flex justify-between h-16 items-center">
-        <!-- Title -->
-        <div>
-      <%= link_to "LLM Comparator", root_path,
-            class: "text-xl font-bold text-gray-800" %>
-          </a>
-        </div>
-
-        <!-- User Sign In/Sign Out Button -->
-        <% if user_signed_in? %>
-            <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "bg-blue-500 text-white px-4 py-2 rounded-xl hover:bg-blue-600" %>
-
-
-        <% else %>
+    <!-- Auth buttons -->
     <div class="flex space-x-2">
-        <%= link_to "Sign In", new_user_session_path, class: "bg-blue-500 text-white px-4 py-2 rounded-xl hover:bg-blue-600" %>
-        <%= link_to "Sign Up", new_user_registration_path, class: "bg-blue-500 text-white px-4 py-2 rounded-xl hover:bg-blue-600" %>
+      <% if user_signed_in? %>
+        <%= button_to "Sign Out",
+              destroy_user_session_path,
+              method: :delete,
+              class: "bg-indigo-600 text-white px-4 py-2 rounded-xl hover:bg-indigo-700 transition" %>
+      <% else %>
+        <%= link_to "Sign In",
+              new_user_session_path,
+              class: "bg-indigo-600 text-white px-4 py-2 rounded-xl hover:bg-indigo-700 transition" %>
+        <%= link_to "Sign Up",
+              new_user_registration_path,
+              class: "bg-indigo-600 text-white px-4 py-2 rounded-xl hover:bg-indigo-700 transition" %>
+      <% end %>
     </div>
-        <% end %>
-
-      </div>
-
-  </nav>
-  
+  </div>
+</nav>

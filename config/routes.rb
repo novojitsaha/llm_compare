@@ -14,5 +14,7 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   root 'home#index'
+  
+  post "compare_models", to: "home#compare_models", as: "compare_models"
 
 end
