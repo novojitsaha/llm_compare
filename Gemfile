@@ -63,3 +63,5 @@ gem "tailwindcss-rails", "~> 4.2"
 gem 'devise', '~> 4.9', '>= 4.9.3'
 
 gem "openai", github: "openai/openai-ruby", branch: "main"
+
+gem 'dotenv-rails'
