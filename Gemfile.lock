@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/openai/openai-ruby.git
+  revision: ac3c96c6285eacd4528bd76a8b9170bbbabb63b0
+  branch: main
+  specs:
+    openai (0.1.0.pre.alpha.5)
+      connection_pool
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -342,6 +350,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   kamal
+  openai!
   pg (~> 1.1)
   propshaft
   puma (>= 5.0)
